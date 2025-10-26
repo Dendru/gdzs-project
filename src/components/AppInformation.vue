@@ -3,7 +3,9 @@
     <h2>Документы</h2>
     <div v-for="decree in decrees" :key="decree.name" class="divblock">
       <h4>{{ decree.numAndDate }}</h4>
-      <p><strong>{{ decree.name }}</strong> {{ decree.body }}</p>
+      <p>
+        <strong>{{ decree.name }}</strong> {{ decree.body }}
+      </p>
     </div>
   </div>
 </template>
@@ -100,8 +102,7 @@ export default {
   margin-top: 40px;
 }
 p {
-  text-align:left;
+  text-align: left;
   line-height: 1.5em;
 }
-
 </style>

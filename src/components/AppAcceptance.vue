@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Приемка дежурства</h2>
+    <h2>Прием дежурства</h2>
     <div v-for="item in acceptance" :key="item.name">
       <h3>{{ item.name }}</h3>
       <p>{{ item.body }}</p>
@@ -16,8 +16,7 @@ export default {
       acceptance: [
         {
           name: 'Пожарный №1',
-          body:
-          'Принимает пожарные стволы, диэлектрику(перчатки, коврик, боты, ножницы), переносные заземлители'
+          body: 'Принимает пожарные стволы, диэлектрику(перчатки, коврик, боты, ножницы), переносные заземлители'
         },
         {
           name: 'Пожарный №2',
@@ -31,12 +30,11 @@ export default {
     }
   }
 }
-
 </script>
 
 <style scoped>
 p {
-  text-align:left;
+  text-align: left;
   line-height: 1.5em;
 }
 </style>

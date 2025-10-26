@@ -8,12 +8,12 @@
             <p>{{ item }}</p>
           </li>
           <li v-else-if="item && typeof item === 'object'">
-            {{ item.title }}
-          <ul v-if="item.subList && item.subList.length" class="custom-list">
-            <li v-for="(sub,subIdx) in item.subList" :key="subIdx">
-              <p>{{ sub }}</p>
-            </li>
-          </ul>
+            <p>{{ item.title }}</p>
+            <ul v-if="item.subList && item.subList.length" class="custom-list">
+              <li v-for="(sub, subIdx) in item.subList" :key="subIdx">
+                <p>{{ sub }}</p>
+              </li>
+            </ul>
           </li>
         </template>
       </ol>
@@ -35,10 +35,7 @@ export default {
         {
           title:
             'Герметичность аппарата (падение не более 10 атм. за 1 минуту):',
-          subList: [
-            'без подключения к маске',
-            'с подключением к маске'
-          ]
+          subList: ['без подключения к маске', 'с подключением к маске']
         },
         'Звуковой сигнал (60 – 50 атм.)',
         'Визуальный осмотр спасательного устройства',
@@ -51,6 +48,9 @@ export default {
 </script>
 
 <style scoped>
+ol {
+  margin-left: -20px;
+}
 li {
   text-align: left;
 }
